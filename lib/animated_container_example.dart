@@ -1,5 +1,5 @@
 
-//study resources: https://api.flutter.dev/flutter/widgets/AnimatedContainer-class.htmlgit
+//study resources: https://api.flutter.dev/flutter/widgets/AnimatedContainer-class.html
 
 import 'package:flutter/material.dart';
 
@@ -21,7 +21,7 @@ class _AnimatedContainerExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Built-in animated widgets"),
+        title: const Text("AnimatedContainer example"),
       ),
       body: Center(
         child: Column(

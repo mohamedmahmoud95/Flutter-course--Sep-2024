@@ -1,6 +1,7 @@
 
 
 //study resources: https://api.flutter.dev/flutter/widgets/AnimatedSize-class.html
+
 import 'package:flutter/material.dart';
 
 class AnimatedSizeExample extends StatefulWidget {
@@ -18,7 +19,7 @@ class _AnimatedSizeExampleState extends State<AnimatedSizeExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("AnimatedSize"),
+        title: const Text("AnimatedSize example"),
       ),
       body:  Center(
         child: GestureDetector(
