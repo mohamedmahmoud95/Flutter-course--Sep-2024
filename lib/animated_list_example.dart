@@ -14,21 +14,17 @@ class _AnimatedListExampleState extends State<AnimatedListExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+          onPressed: ()=> Navigator.of(context).pop(),
+        ),
+      ),
 
 
 
 
       floatingActionButton:
-      Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            FloatingActionButton(
-                child: const Icon(Icons.keyboard_arrow_left_rounded),
-                onPressed: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
-                  const AnimatedCrossFadeExample  ()));
-                }
-            ),
+
             FloatingActionButton(
                 child: const Icon(Icons.keyboard_arrow_right_rounded),
 
@@ -37,8 +33,6 @@ class _AnimatedListExampleState extends State<AnimatedListExample> {
                   const AnimatedCrossFadeExample()));
                 }
             ),
-          ]
-      ),
 
     );
   }

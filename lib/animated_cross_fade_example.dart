@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/animated_align_example.dart';
 import 'package:flutter_animation/animated_list_example.dart';
+import 'package:flutter_animation/hero_animation_example_small_pic.dart';
 
 class AnimatedCrossFadeExample extends StatefulWidget {
   const AnimatedCrossFadeExample({Key? key}) : super(key: key);
@@ -70,28 +71,17 @@ class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
       ),
 
       floatingActionButton:
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          FloatingActionButton(
-            child: const Icon(Icons.keyboard_arrow_left_rounded),
-              onPressed: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
-              const AnimatedAlignExample  ()));
-              }
-          ),
+
+
           FloatingActionButton(
               child: const Icon(Icons.keyboard_arrow_right_rounded),
 
               onPressed: (){
                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
-                const AnimatedListExample()));
+                const HeroAnimationExample()));
               }
           ),
 
-        ],
-
-      ),
 
     );
   }

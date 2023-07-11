@@ -45,16 +45,8 @@ class _AnimatedSizeExampleState extends State<AnimatedSizeExample> {
 
 
       floatingActionButton:
-      Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            FloatingActionButton(
-                child: const Icon(Icons.keyboard_arrow_left_rounded),
-                onPressed: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
-                  const AnimatedContainerExample ()));
-                }
-            ),
+
+
             FloatingActionButton(
                 child: const Icon(Icons.keyboard_arrow_right_rounded),
 
@@ -63,8 +55,7 @@ class _AnimatedSizeExampleState extends State<AnimatedSizeExample> {
                   const AnimatedPositionedExample()));
                 }
             ),
-          ]
-      ),
+
     );
   }
 }

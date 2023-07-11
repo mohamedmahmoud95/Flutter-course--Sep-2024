@@ -48,16 +48,7 @@ class _AnimatedAlignExampleState extends State<AnimatedAlignExample> {
 
 
       floatingActionButton:
-      Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            FloatingActionButton(
-                child: const Icon(Icons.keyboard_arrow_left_rounded),
-                onPressed: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
-                  const AnimatedPositionedExample  ()));
-                }
-            ),
+
             FloatingActionButton(
                 child: const Icon(Icons.keyboard_arrow_right_rounded),
 
@@ -66,8 +57,7 @@ class _AnimatedAlignExampleState extends State<AnimatedAlignExample> {
                   const AnimatedCrossFadeExample()));
                 }
             ),
-          ]
-      ),
+
     );
   }
 }

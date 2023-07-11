@@ -73,13 +73,7 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
         ),
       ),
       floatingActionButton:
-          Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-        FloatingActionButton(
-            child: const Icon(Icons.keyboard_arrow_left_rounded),
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const ChangingContainerPropertiesOnRunTime()));
-            }),
+
         FloatingActionButton(
             child: const Icon(Icons.keyboard_arrow_right_rounded),
             onPressed: () {
@@ -87,7 +81,7 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
                   builder: (context) =>
                       const AnimatedSizeExample()));
             }),
-      ]),
+
     );
   }
 }
