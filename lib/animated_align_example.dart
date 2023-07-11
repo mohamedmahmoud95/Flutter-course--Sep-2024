@@ -1,3 +1,5 @@
+//study resources: https://api.flutter.dev/flutter/widgets/AnimatedAlign-class.html
+
 import 'package:flutter/material.dart';
 
 class AnimatedAlignExample extends StatefulWidget {

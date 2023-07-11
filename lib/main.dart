@@ -8,6 +8,7 @@ comment/uncomment the name of the page after the home property under below
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/animated_align_example.dart';
 import 'package:flutter_animation/animated_container_example.dart';
+import 'package:flutter_animation/animated_cross_fade_example.dart';
 import 'package:flutter_animation/animated_positioned_example.dart';
 import 'package:flutter_animation/animated_size_example.dart';
 import 'package:flutter_animation/changing_container_properties_on_run_time.dart';
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
       //AnimatedContainerExample(),
       //AnimatedSizeExample(),
       //AnimatedPositionedExample(),
-      AnimatedAlignExample(),
+      //AnimatedAlignExample(),
+      AnimatedCrossFadeExample(),
     );
   }
 }
