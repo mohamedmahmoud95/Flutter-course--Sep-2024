@@ -1,3 +1,6 @@
+
+//study resources: https://api.flutter.dev/flutter/widgets/AnimatedContainer-class.htmlgit
+
 import 'package:flutter/material.dart';
 
 class AnimatedContainerExample extends StatefulWidget {

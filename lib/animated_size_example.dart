@@ -1,3 +1,6 @@
+
+
+//study resources: https://api.flutter.dev/flutter/widgets/AnimatedSize-class.html
 import 'package:flutter/material.dart';
 
 class AnimatedSizeExample extends StatefulWidget {
