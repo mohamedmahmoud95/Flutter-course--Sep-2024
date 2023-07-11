@@ -25,12 +25,12 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home:
-      //ChangingContainerPropertiesOnRunTime(),
+      ChangingContainerPropertiesOnRunTime(),
       //AnimatedContainerExample(),
       //AnimatedSizeExample(),
       //AnimatedPositionedExample(),
       //AnimatedAlignExample(),
-      AnimatedCrossFadeExample(),
+      //AnimatedCrossFadeExample(),
     );
   }
 }

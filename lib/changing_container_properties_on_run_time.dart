@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/animated_container_example.dart';
 
 class ChangingContainerPropertiesOnRunTime extends StatefulWidget {
   const ChangingContainerPropertiesOnRunTime({Key? key}) : super(key: key);
@@ -63,6 +64,17 @@ class _ChangingContainerPropertiesOnRunTimeState
           ],
         ),
       ),
+
+        floatingActionButton:
+
+        FloatingActionButton(
+        child: const Icon(Icons.keyboard_arrow_right_rounded),
+        onPressed: (){
+          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+          const AnimatedContainerExample()));
+        }
+    ),
+
     );
   }
 }

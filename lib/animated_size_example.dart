@@ -3,6 +3,9 @@
 //study resources: https://api.flutter.dev/flutter/widgets/AnimatedSize-class.html
 
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/animated_align_example.dart';
+import 'package:flutter_animation/animated_container_example.dart';
+import 'package:flutter_animation/animated_positioned_example.dart';
 
 class AnimatedSizeExample extends StatefulWidget {
   const AnimatedSizeExample({Key? key}) : super(key: key);
@@ -36,6 +39,31 @@ class _AnimatedSizeExampleState extends State<AnimatedSizeExample> {
 
           ),
         ),
+      ),
+
+
+
+
+      floatingActionButton:
+      Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            FloatingActionButton(
+                child: const Icon(Icons.keyboard_arrow_left_rounded),
+                onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+                  const AnimatedContainerExample ()));
+                }
+            ),
+            FloatingActionButton(
+                child: const Icon(Icons.keyboard_arrow_right_rounded),
+
+                onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+                  const AnimatedPositionedExample()));
+                }
+            ),
+          ]
       ),
     );
   }

@@ -1,6 +1,8 @@
 //study resources: https://api.flutter.dev/flutter/widgets/AnimatedAlign-class.html
 
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/animated_cross_fade_example.dart';
+import 'package:flutter_animation/animated_positioned_example.dart';
 
 class AnimatedAlignExample extends StatefulWidget {
   const AnimatedAlignExample({Key? key}) : super(key: key);
@@ -42,6 +44,29 @@ class _AnimatedAlignExampleState extends State<AnimatedAlignExample> {
             ),
           ),
         ),
+      ),
+
+
+      floatingActionButton:
+      Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            FloatingActionButton(
+                child: const Icon(Icons.keyboard_arrow_left_rounded),
+                onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+                  const AnimatedPositionedExample  ()));
+                }
+            ),
+            FloatingActionButton(
+                child: const Icon(Icons.keyboard_arrow_right_rounded),
+
+                onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
+                  const AnimatedCrossFadeExample()));
+                }
+            ),
+          ]
       ),
     );
   }

@@ -1,7 +1,8 @@
-
 //study resources: https://api.flutter.dev/flutter/widgets/AnimatedContainer-class.html
 
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/animated_size_example.dart';
+import 'package:flutter_animation/changing_container_properties_on_run_time.dart';
 
 class AnimatedContainerExample extends StatefulWidget {
   const AnimatedContainerExample({Key? key}) : super(key: key);
@@ -11,8 +12,7 @@ class AnimatedContainerExample extends StatefulWidget {
       _AnimatedContainerExampleState();
 }
 
-class _AnimatedContainerExampleState
-    extends State<AnimatedContainerExample> {
+class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
   double width = 50;
   double height = 50;
   Color color = Colors.blue;
@@ -72,6 +72,22 @@ class _AnimatedContainerExampleState
           ],
         ),
       ),
+      floatingActionButton:
+          Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+        FloatingActionButton(
+            child: const Icon(Icons.keyboard_arrow_left_rounded),
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const ChangingContainerPropertiesOnRunTime()));
+            }),
+        FloatingActionButton(
+            child: const Icon(Icons.keyboard_arrow_right_rounded),
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) =>
+                      const AnimatedSizeExample()));
+            }),
+      ]),
     );
   }
 }
