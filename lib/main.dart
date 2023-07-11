@@ -1,4 +1,12 @@
+
+/*
+How to use:
+comment/uncomment the name of the page after the home property under below
+ */
+
+
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/animated_align_example.dart';
 import 'package:flutter_animation/animated_container_example.dart';
 import 'package:flutter_animation/animated_positioned_example.dart';
 import 'package:flutter_animation/animated_size_example.dart';
@@ -19,7 +27,8 @@ class MyApp extends StatelessWidget {
       //ChangingContainerPropertiesOnRunTime(),
       //AnimatedContainerExample(),
       //AnimatedSizeExample(),
-      AnimatedPositionedExample(),
+      //AnimatedPositionedExample(),
+      AnimatedAlignExample(),
     );
   }
 }

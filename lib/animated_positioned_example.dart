@@ -1,3 +1,6 @@
+
+//study resources: https://api.flutter.dev/flutter/widgets/AnimatedPositioned-class.html
+
 import 'package:flutter/material.dart';
 
 class AnimatedPositionedExample extends StatefulWidget {
@@ -48,7 +51,7 @@ class _AnimatedPositionedExampleState extends State<AnimatedPositionedExample> {
             AnimatedPositioned(
                 left: 90,
                 top: _top,
-                duration: const Duration(seconds: 1),
+                duration: const Duration(milliseconds: 500),
                 child: Container(
                   height: 100,
                   width: 200,
