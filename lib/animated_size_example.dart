@@ -9,7 +9,8 @@ class AnimatedSizeExample extends StatefulWidget {
 
 class _AnimatedSizeExampleState extends State<AnimatedSizeExample> {
   bool _isLarge = false;
-  double size = 100;
+  double size = 200;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,10 +19,16 @@ class _AnimatedSizeExampleState extends State<AnimatedSizeExample> {
       ),
       body:  Center(
         child: GestureDetector(
-          child: AnimatedSize(
-            duration: Duration(seconds: 1),
-
-
+          onTap: (){
+            setState(() {
+              _isLarge = !_isLarge;
+              size = _isLarge? 100 : size = 300;
+            });
+          },
+          child:  AnimatedSize(
+            duration: const Duration(seconds: 1),
+            curve: Curves.easeIn,
+            child: FlutterLogo(size: size,),
 
           ),
         ),
