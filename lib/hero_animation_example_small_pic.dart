@@ -17,9 +17,10 @@ class HeroAnimationExample extends StatelessWidget {
 
       body: Center(
         child: Wrap(
+          runSpacing: 30,
+          spacing: 30,
           children: [
 
-            SizedBox(height: 100, child: Image.network("https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg")),
             SizedBox(height: 100, child: Image.network("https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg")),
             SizedBox(height: 100, child: Image.network("https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg")),
             SizedBox(height: 100, child: Image.network("https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg")),
@@ -38,6 +39,7 @@ class HeroAnimationExample extends StatelessWidget {
                 ),
           ),
             ),
+            SizedBox(height: 100, child: Image.network("https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg")),
             SizedBox(height: 100, child: Image.network("https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg")),
             SizedBox(height: 100, child: Image.network("https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg")),
             SizedBox(height: 100, child: Image.network("https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg")),
