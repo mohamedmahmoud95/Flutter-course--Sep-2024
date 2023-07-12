@@ -1,3 +1,5 @@
+//study resources: https://api.flutter.dev/flutter/widgets/AnimatedOpacity-class.html
+
 import 'package:flutter/material.dart';
 
 class AnimatedOpacityExample extends StatefulWidget {
