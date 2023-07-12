@@ -22,16 +22,29 @@ class _TweenSequenceExampleState extends State<TweenSequenceExample>
     super.initState();
 
     _animationController = AnimationController(
-      duration: const Duration(seconds: 1),
+      duration: const Duration(milliseconds: 500),
       vsync: this,
     );
 
     _colorAnimation = ColorTween(begin: Colors.grey, end: Colors.red)
         .animate(_animationController);
 
-    // _sizeAnimation = TweenSequence(
-    //     <TweenSequenceItem<double>>
-    // );
+    _sizeAnimation = TweenSequence(
+        <TweenSequenceItem<double>> [
+    TweenSequenceItem<double>(
+
+      tween: Tween<double>(begin: 50, end: 100),
+      weight: 50,
+      ),
+
+      TweenSequenceItem<double>(
+    tween: Tween<double>(begin: 100, end: 50),
+    weight: 50,
+    ),
+
+    ],
+    ).animate(_animationController) ;
+
   }
 
   @override
@@ -80,7 +93,7 @@ class _TweenSequenceExampleState extends State<TweenSequenceExample>
                           animation: _animationController,
                           builder: (BuildContext context, _){
                             return IconButton(
-                              icon:  Icon(Icons.favorite, color: _colorAnimation.value, size: 50,),
+                              icon:  Icon(Icons.favorite, color: _colorAnimation.value, size: _sizeAnimation.value,),
                               onPressed: (){
                                 setState(() {
                                   _addedToFavorite = !_addedToFavorite;

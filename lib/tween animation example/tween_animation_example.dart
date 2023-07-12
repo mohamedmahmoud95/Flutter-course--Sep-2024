@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animation/tween%20animation%20example%202%20between%20widgets/tween_animation_example_2.dart';
 import 'package:flutter_animation/tween%20animation%20example/animated_logo_widget.dart';
 import 'package:flutter_animation/tween_sequence_example.dart';
 
