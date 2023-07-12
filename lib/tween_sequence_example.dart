@@ -16,18 +16,22 @@ class _TweenSequenceExampleState extends State<TweenSequenceExample>
   late Animation<double?> _sizeAnimation;
 
   bool _addedToFavorite = false;
+  late CurvedAnimation _curve;
 
   @override
   void initState() {
     super.initState();
 
     _animationController = AnimationController(
-      duration: const Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 300),
       vsync: this,
+
     );
 
     _colorAnimation = ColorTween(begin: Colors.grey, end: Colors.red)
         .animate(_animationController);
+
+    _curve = CurvedAnimation(parent: _animationController, curve: Curves.slowMiddle);
 
     _sizeAnimation = TweenSequence(
         <TweenSequenceItem<double>> [
@@ -43,7 +47,7 @@ class _TweenSequenceExampleState extends State<TweenSequenceExample>
     ),
 
     ],
-    ).animate(_animationController) ;
+    ).animate(_curve) ;
 
   }
 
