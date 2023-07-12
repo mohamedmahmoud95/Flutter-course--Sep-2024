@@ -18,6 +18,7 @@ class _AnimatedPositionedExampleState extends State<AnimatedPositionedExample> {
   double _top = 300;
   String _text = "Reveal";
 
+
   bool _revealed = false;
 
   @override

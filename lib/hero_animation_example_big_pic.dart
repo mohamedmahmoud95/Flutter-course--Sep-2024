@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/animated_list_example.dart';
+import 'package:flutter_animation/animated_opacity_example.dart';
 
 import 'animated_cross_fade_example.dart';
 
@@ -64,7 +65,7 @@ class HeroAnimationExampleBigPic extends StatelessWidget {
           child: const Icon(Icons.keyboard_arrow_right_rounded),
           onPressed: (){
             Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
-            const AnimatedListExample()));
+            const AnimatedOpacityExample()));
           }
       ),
 
