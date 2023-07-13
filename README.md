@@ -1,17 +1,9 @@
 # flutter_animation
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+https://github.com/mohamedmahmoud95/GDSC-Flutter-course-session8-Animation/assets/46673407/e07968d5-acfd-4fb8-b8d4-4da3a7506a6b
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 # GDSC-Flutter-course-session8-Animation
