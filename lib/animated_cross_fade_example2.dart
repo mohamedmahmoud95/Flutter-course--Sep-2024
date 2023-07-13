@@ -1,23 +1,24 @@
 //study resources: https://api.flutter.dev/flutter/widgets/AnimatedCrossFade-class.html
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/animated_align_example.dart';
-import 'package:flutter_animation/animated_cross_fade_example2.dart';
 import 'package:flutter_animation/animated_list_example.dart';
 import 'package:flutter_animation/hero_animation_example_small_pic.dart';
 
-class AnimatedCrossFadeExample extends StatefulWidget {
-  const AnimatedCrossFadeExample({Key? key}) : super(key: key);
+class AnimatedCrossFadeExample2 extends StatefulWidget {
+  const AnimatedCrossFadeExample2({Key? key}) : super(key: key);
 
   @override
-  State<AnimatedCrossFadeExample> createState() => _AnimatedCrossFadeExampleState();
+  State<AnimatedCrossFadeExample2> createState() => _AnimatedCrossFadeExample2State();
 }
 
-class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
+class _AnimatedCrossFadeExample2State extends State<AnimatedCrossFadeExample2> {
   String _selectedColor = 'Grey';
-  String redPoloURL = "dsfsdgdfg";
-  String bluePoloURL = "dsfsdgdfg";
-  String blackPoloURL = "dsfsdgdfg";
+  String _selectedColorUrl = "https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg";
+  String _currentColorUrl = "https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg";
 
+  String blackPoloURL = "https://m.media-amazon.com/images/I/51w9RcIHUeL._AC_SX679_.jpg";
+  String greyPoloURL = "https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg";
+  String bluePoloUrl = "https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/45/432662/1.jpg";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,10 +26,10 @@ class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
         title: const
         Text(
             style: TextStyle(fontSize: 20),
-            "AnimatedCrossFade example"
+            "AnimatedCrossFade example 2"
         ),
       ),
-      
+
       body:
 
       Padding(
@@ -37,10 +38,10 @@ class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
           children: [
             Center(
               child: AnimatedCrossFade(
-                firstChild: Image.network("https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg"),
-                secondChild: Image.network("https://m.media-amazon.com/images/I/51w9RcIHUeL._AC_SX679_.jpg"),
+                firstChild: SizedBox(height: 300, child: Image.network(_currentColorUrl, fit: BoxFit.fitWidth)),
+                secondChild: SizedBox(height: 300, child: Image.network(_selectedColorUrl, fit: BoxFit.fill)),
                 crossFadeState: _selectedColor == 'Grey'? CrossFadeState.showFirst : CrossFadeState.showSecond,
-                duration: const Duration(seconds: 1),
+                duration: const Duration(seconds: 2),
               ),
             ),
 
@@ -54,29 +55,52 @@ class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
                   onTap: (){
                     setState(() {
                       _selectedColor = 'Grey';
+                      _selectedColorUrl = greyPoloURL;
+                      _currentColorUrl = _selectedColorUrl;
                     });
                   },
                   child: const CircleAvatar(
+                    radius: 15,
                     backgroundColor: Colors.grey,
                   ),
                 ),
 
-                const SizedBox(width: 50,),
+                const SizedBox(width: 30,),
 
                 GestureDetector(
                   onTap: (){
                     setState(() {
+                      _selectedColorUrl = blackPoloURL;
                       _selectedColor = 'Black';
+                      _currentColorUrl = _selectedColorUrl;
+
                     });
+
                   },
                   child: const CircleAvatar(
+                    radius: 15,
                     backgroundColor: Colors.black,
+                  ),
+                ),
+
+                const SizedBox(width: 30,),
+
+                GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      _selectedColor = 'Blue';
+                      _selectedColorUrl = bluePoloUrl;
+                      _currentColorUrl = _selectedColorUrl;
+                    });
+
+                  },
+                  child: const CircleAvatar(
+                    radius: 15,
+                    backgroundColor: Colors.blue,
                   ),
                 )
               ],
             ),
-
-
           ],
         ),
       ),
@@ -89,7 +113,7 @@ class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
 
               onPressed: (){
                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
-                const AnimatedCrossFadeExample2()));
+                const HeroAnimationExample()));
               }
           ),
 

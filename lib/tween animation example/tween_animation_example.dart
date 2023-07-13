@@ -21,7 +21,7 @@ class _TweenAnimationExampleState extends State<TweenAnimationExample> {
       ),
 
 
-      body: const AnimatedLogoWidget(),
+     body: const AnimatedLogoWidget(),
 
       floatingActionButton:
       FloatingActionButton(

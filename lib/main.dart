@@ -14,6 +14,8 @@ import 'package:flutter_animation/animated_size_example.dart';
 import 'package:flutter_animation/changing_container_properties_on_run_time.dart';
 import 'package:flutter_animation/hero_animation_example_small_pic.dart';
 
+import 'animated_cross_fade_example2.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
       //AnimatedSizeExample(),
       //AnimatedPositionedExample(),
       //AnimatedAlignExample(),
-      //AnimatedCrossFadeExample(),
+      //AnimatedCrossFadeExample2(),
       //HeroAnimationExample(),
     );
   }

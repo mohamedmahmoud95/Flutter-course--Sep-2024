@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/animated_list_example.dart';
 
 import 'animated_opacity_example.dart';
 
@@ -45,6 +46,7 @@ class _TweenSequenceExampleState extends State<TweenSequenceExample>
     tween: Tween<double>(begin: 100, end: 50),
     weight: 50,
     ),
+
 
     ],
     ).animate(_curve) ;
@@ -116,7 +118,7 @@ class _TweenSequenceExampleState extends State<TweenSequenceExample>
 
                   const SizedBox(height: 50,),
                   const Text(
-                    "High quality, 100% cotton Polo T-shirt",
+                    "High quality, 120% cotton Polo T-shirt",
                     style: TextStyle(fontSize: 15),
                   ),
                   const Text(
@@ -124,7 +126,7 @@ class _TweenSequenceExampleState extends State<TweenSequenceExample>
                     style: TextStyle(fontSize: 15),
                   ),
                   const Text(
-                    "Like... s3edyan Egyptian..",
+                    "Like.. deep s3edian Egyptian..",
                     style: TextStyle(fontSize: 15),
                   ),
                   const Text(
@@ -141,7 +143,7 @@ class _TweenSequenceExampleState extends State<TweenSequenceExample>
           child: const Icon(Icons.keyboard_arrow_right_rounded),
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => const AnimatedOpacityExample()));
+                builder: (context) => const AnimatedListExample()));
           }),
     );
   }

@@ -1,3 +1,7 @@
+
+
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/animated_container_example.dart';
 
@@ -21,7 +25,8 @@ class _ChangingContainerPropertiesOnRunTimeState
       appBar: AppBar(
         title: const Text("Regular container"),
       ),
-      body: Center(
+      body:
+      Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -78,3 +83,7 @@ class _ChangingContainerPropertiesOnRunTimeState
     );
   }
 }
+
+
+
+

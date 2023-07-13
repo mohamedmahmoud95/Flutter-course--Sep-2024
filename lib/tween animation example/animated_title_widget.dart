@@ -41,7 +41,8 @@ class _AnimatedTitleWidgetState extends State<AnimatedTitleWidget> {
       duration: const Duration(seconds: 1),
       tween: Tween <double> (begin: 0, end: 1),
       builder: (BuildContext context, double value, Widget? child) {
-        return Opacity(opacity: value,
+        return Opacity(
+            opacity: value,
           child: Padding(
             padding:  EdgeInsets.only(top: value*20),
             child: child,
