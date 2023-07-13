@@ -38,10 +38,6 @@ class _AnimatedListExampleState extends State<AnimatedListExample> {
   }
 }
 
-
-
-
-
 class TripList extends StatefulWidget {
   @override
   _TripListState createState() => _TripListState();
@@ -49,7 +45,7 @@ class TripList extends StatefulWidget {
 
 class _TripListState extends State<TripList> {
   GlobalKey<AnimatedListState> _listKey = GlobalKey<AnimatedListState>();
-  List<Widget> _tripTiles = [];
+  List<Widget> _productTiles = [];
 
   @override
   void initState() {
@@ -62,62 +58,61 @@ class _TripListState extends State<TripList> {
   void _addTrips() {
     // get data from db
     List<product> _trips = [
-      product(title: 'Polo', price: '350', available: '3', img: 'https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg'),
-      product(title: 'Polo', price: '400', available: '5', img: 'https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg'),
-      product(title: 'Polo', price: '750', available: '2', img: 'https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg'),
-      product(title: 'Polo', price: '600', available: '4', img: 'https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg'),
+      product(title: 'Grey Polo',  price: '400',  available: '5', img: 'https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg'),
+      product(title: 'Black Polo', price: '420',  available: '3', img: 'https://m.media-amazon.com/images/I/51w9RcIHUeL._AC_SX679_.jpg'),
+      product(title: 'Blue Polo',  price: '450',  available: '2', img: 'https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/45/432662/1.jpg'),
     ];
 
     Future ft = Future((){});
     _trips.forEach((product trip) {
       ft = ft.then((data) {
         return Future.delayed(const Duration(milliseconds: 100), () {
-          _tripTiles.add(_buildTile(trip));
-          _listKey.currentState?.insertItem(_tripTiles.length - 1);
+          _productTiles.add(_buildTile(trip));
+          _listKey.currentState?.insertItem(_productTiles.length - 1);
         });
       });
     });
   }
 
-  Widget _buildTile(product trip) {
+  Widget _buildTile(product product) {
     return ListTile(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Details(trip: trip)));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Details(trip: product)));
       },
       contentPadding: EdgeInsets.all(25),
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text('${trip.available} pieces available',
+          Text('${product.available} pieces available',
               style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.blue[300])),
-          Text(trip.title, style: TextStyle(fontSize: 20, color: Colors.grey[600])),
+          Text(product.title, style: TextStyle(fontSize: 20, color: Colors.grey[600])),
         ],
       ),
       leading: ClipRRect(
         borderRadius: BorderRadius.circular(8.0),
         child: Hero(
-          tag: 'location-img-${trip.img}',
+          tag: 'location-img-${product.img}',
           child: Image.network(
-            '${trip.img}',
-            height: 50.0,
+            product.img,
+            height: 75.0,
           ),
         ),
       ),
-      trailing: Text('\$${trip.price}'),
+      trailing: Text('\$${product.price}'),
     );
   }
 
-  Tween<Offset> _offset = Tween(begin: Offset(1, 0), end: Offset(0, 0));
+  final Tween<Offset> _offset = Tween(begin: Offset(1, 0), end: Offset(0, 0));
 
   @override
   Widget build(BuildContext context) {
     return AnimatedList(
         key: _listKey,
-        initialItemCount: _tripTiles.length,
+        initialItemCount: _productTiles.length,
         itemBuilder: (context, index, animation) {
           return SlideTransition(
             position: animation.drive(_offset),
-            child: _tripTiles[index],
+            child: _productTiles[index],
           );
         });
   }
@@ -150,7 +145,7 @@ class Details extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
-        extendBodyBehindAppBar: true,
+      //  extendBodyBehindAppBar: true,
         body: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
