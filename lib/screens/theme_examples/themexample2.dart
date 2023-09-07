@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
+
+
 class ThemeExample2 extends StatefulWidget {
   const ThemeExample2({Key? key}) : super(key: key);
 
@@ -13,13 +16,24 @@ class _ThemeExampleState extends State<ThemeExample2> {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint(Theme.of(context).primaryColor.value.toString());
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: darkMode? ThemeData.dark():
       ThemeData(
-        primarySwatch: Colors.orange,
-        textTheme: GoogleFonts.alkalamiTextTheme()
+        brightness: Brightness.light,
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: Colors.black,
+        ),
+        primarySwatch: Colors.deepPurple,
+        scaffoldBackgroundColor: Colors.purple.shade50,
+
+       drawerTheme: DrawerThemeData(
+         backgroundColor: Colors.deepPurple.shade200
+       ),
+       textTheme: GoogleFonts.alkalamiTextTheme(),
+        fontFamily: 'Outfit',
+
+
       ),
       home: Scaffold(
         appBar: AppBar(
@@ -32,6 +46,8 @@ class _ThemeExampleState extends State<ThemeExample2> {
             }, icon: Icon(darkMode? Icons.light_mode : Icons.dark_mode)),
           ],
         ),
+
+        drawer: Drawer(),
 
         body: const Center(
           child: Text("This is an awesome text \n"
