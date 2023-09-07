@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_course_aug23_themes_and_responsive_design/screens/responsive_design_example.dart';
 import 'package:flutter_course_aug23_themes_and_responsive_design/screens/responsive_design_example1.dart';
+import 'package:flutter_course_aug23_themes_and_responsive_design/screens/themexample.dart';
 
 void main(){
   runApp(MyApp());
@@ -21,7 +22,8 @@ class _MyAppState extends State<MyApp> {
       home:
       //  PlayingWithMediaQuery(),
       //ResponsiveDesignExample1(),
-      ResponsiveDesignExample(),
+      //ResponsiveDesignExample(),
+      ThemeExample(),
     );
   }
 }
