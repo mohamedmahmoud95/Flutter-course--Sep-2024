@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_course_aug23_themes_and_responsive_design/screens/responsive_design_examples/responsive_design_example.dart';
 import 'package:flutter_course_aug23_themes_and_responsive_design/screens/responsive_design_examples/responsive_design_example1.dart';
+import 'package:flutter_course_aug23_themes_and_responsive_design/screens/theme_examples/theme_example_with_multiple_text_styles.dart';
 import 'package:flutter_course_aug23_themes_and_responsive_design/screens/theme_examples/themexample.dart';
 import 'package:flutter_course_aug23_themes_and_responsive_design/screens/theme_examples/themexample2.dart';
 
@@ -25,7 +26,8 @@ class _MyAppState extends State<MyApp> {
       //ResponsiveDesignExample1(),
       //ResponsiveDesignExample(),
       //ThemeExample(),
-      ThemeExample2(),
+      //ThemeExample2(),
+      ThemeExampleWithMultipleTextStyles(),
 
     );
   }
