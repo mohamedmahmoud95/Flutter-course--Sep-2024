@@ -13,6 +13,8 @@ class _ThemeExampleState extends State<ThemeExample> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
       theme: darkMode? ThemeData.dark():ThemeData.light(),
       home: Scaffold(
         appBar: AppBar(
