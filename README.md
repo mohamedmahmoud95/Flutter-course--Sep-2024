@@ -25,5 +25,7 @@ More resources:
   Effective Dart (Dart best practices):
   https://dart.dev/effective-dart
   
+  more on null safety:
+  https://dart.dev/language/variables
 
   
