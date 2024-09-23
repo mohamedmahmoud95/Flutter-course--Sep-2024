@@ -139,6 +139,27 @@ nobleGases[10] = 'neon';
 nobleGases[18] = 'argon';
 
 
+// a map can contain keys and values of different types.
+void main() {
+Map<dynamic , dynamic> map = {
+  'Country': 'Egypt',
+  'City': 'Cairo',
+  'Population': 10000000,
+  'IsCapital': true,
+  'Languages': ['Arabic', 'English', 'French'],
+  'Neighbours': {
+    'North': 'Mediterranean Sea',
+    'East': 'مش فاكر بصراحة',
+    'South': 'مش فاكر بصراحة',
+    'West': 'مش فاكر بصراحة',
+  },
+};
+
+print(map);
+print(map['Country']);
+
+}
+
 //Map Entry:
 
 A MapEntry in Dart represents a single key-value pair in a map.

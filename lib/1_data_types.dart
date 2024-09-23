@@ -151,9 +151,10 @@ Type casting:
 //   String age = '30';
 //   int ageInt = int.parse(age);
 //   print(ageInt); // 30
-//   double height = 5.7;
+//   double height = 173.5;
 //   String heightString = height.toString();
-//   print(heightString); // 5.7
+//   print(heightString); // 173.5
+//   print(heightString.toStringAsFixed(2)); // 173.50
 // }
 
 //note: Dart also supports the following operations on numbers:
