@@ -59,6 +59,10 @@
 //   }
 // }
 
+//Note: The break statement is used to exit the switch statement after a case is executed. If you omit the break statement, the switch statement will continue to the next case.
+//Note: The default case is executed when none of the cases match the value of the expression.
+//Note: The switch statement can also be used with other types, such as int, double, and enum.
+
 // //The ternary operator is a shorthand for the if..else statement.
 // //example:
 // void main() {
