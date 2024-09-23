@@ -28,4 +28,8 @@ More resources:
   more on null safety:
   https://dart.dev/language/variables
 
+  Dart crash course - The Net Ninja:
+  https://www.youtube.com/playlist?list=PL4cUxeGkcC9iVGY3ppchN9kIauln8IiEh
+  (Highly recommended, but as the name suggests, it's just a crash course)
+
   
