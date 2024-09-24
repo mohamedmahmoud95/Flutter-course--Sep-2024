@@ -1,4 +1,7 @@
+bool topLevel = true;
 
-void main()
-{
+void main() {
+List<String> list = ['apples', 'bananas', 'oranges'];
+
+list.forEach(print);
 }

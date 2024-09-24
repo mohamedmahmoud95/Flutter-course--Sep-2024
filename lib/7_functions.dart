@@ -37,6 +37,10 @@ void main() {
  */
 
 
+//=========================================================================================================
+//=========================================================================================================
+
+
 //Arrow functions
 //For functions that contain just one expression, you can use a shorthand syntax:
 
@@ -71,7 +75,11 @@ void greet(String name, [String? greeting]) {
   }
  */
 
-//note: you can't have optional parameters before required parameters.
+
+
+//=========================================================================================================
+//=========================================================================================================
+
 
 
 //Function with default parameters
@@ -157,6 +165,9 @@ void greet3(String name, {String? greeting}) {
   }
 }
 
+//=========================================================================================================
+//=========================================================================================================
+
 
 //Anonymous functions
 //Anonymous functions are functions without a name.
@@ -193,6 +204,12 @@ void greet5(String name, Function(String) greetFunction) {
 }
 
 
+
+
+//=========================================================================================================
+//=========================================================================================================
+
+
 //Lambda functions
 //Lambda functions are anonymous functions that can be assigned to a variable or passed as an argument to another function.
 
@@ -222,9 +239,39 @@ void greet5(String name, Function(String) greetFunction) {
 //   numbers.forEach((number) => print(number));
 // }
 
+//note: you might find it a bit odd that we are passing functions to variables now
+//but remember, in dart, a function is an object of type "Function", so you can pass it around like any other object.
+//in the past example,
+//var add = (int a, int b) => a + b;
+//if you print(add.runtimeType), you will get (int, int) => int
+//which means that add is a function that takes two integers and returns an integer.
+//and you can also replace the type of add with Function, like this:
+//Function add = (int a, int b) => a + b;
+
+
+//Note: Lambda functions are also known as: Arrow functions, Lambda expressions, anonymous functions, or closures.
+//another example:
+
+// const list = ['apples', 'bananas', 'oranges'];
+//
+// var uppercaseList = list.map((item) {
+//   return item.toUpperCase();
+// }).toList();
+// // Convert to list after mapping
+//
+// for (var item in uppercaseList) {
+// print('$item: ${item.length}');
+// }
+
+//or use the handy arrow operator to shorten it like:
+// var uppercaseList = list.map((item) => item.toUpperCase()).toList();
+// uppercaseList.forEach((item) => print('$item: ${item.length}'));
+
 
 //=========================================================================================================
 //=========================================================================================================
+
+
 //side note
 //about main function
 //The main() function is the entry point of a Dart application.
@@ -279,3 +326,97 @@ Scripting and Automation: When creating scripts, arguments help automate tasks b
 
 //=========================================================================================================
 //=========================================================================================================
+
+
+//
+//In Dart, you can define functions inside other functions.
+
+//example:
+// void main()
+// {
+//   void printHi(){
+//     print("Hi");
+//   }
+//
+//   void printHello(){
+//     print("Hello");
+//     printHi();
+//   }
+//
+//   printHello();
+//
+// }
+
+
+//=========================================================================================================
+//=========================================================================================================
+
+
+//Function scope:
+//scope is the area of code where a variable is accessible.
+//A function is defined by the curly braces {} that enclose its body.
+
+//example:
+// bool topLevel = true;
+//
+//
+// void main() {
+//   var insideMain = true;
+//
+//   void myFunction() {
+//     var insideFunction = true;
+//
+//     void nestedFunction() {
+//       var insideNestedFunction = true;
+//
+//       assert(topLevel);
+//       assert(insideMain);
+//       assert(insideFunction);
+//       assert(insideNestedFunction);
+//     }
+//   }
+// }
+
+//The nestedFunction() method can use variables from every level, all the way up to the top level.
+
+
+
+//=========================================================================================================
+//=========================================================================================================
+//Tear-offs
+
+//Dart supports tear-offs, which are a shorthand way to refer to a method or function without invoking it.
+//When you refer to a function, method, or named constructor without parentheses, Dart creates a tear-off.
+// This is a closure that takes the same parameters as the function and invokes the underlying function when you call it.
+// If your code needs a closure that invokes a named function with the same parameters as the closure accepts, don't wrap the call in a lambda. Use a tear-off.
+
+//Example:
+//Good:
+// var list = [1, 2, 3];
+// list.forEach(print);
+
+//Bad:
+// var list = [1, 2, 3];
+// list.forEach((item) => print(item));
+
+//=========================================================================================================
+//=========================================================================================================
+
+
+
+//Extra lovely notes from the Dart docs:
+/*
+Return values
+#
+All functions return a value. If no return value is specified, the statement return null; is implicitly appended to the function body.
+
+foo() {}
+
+assert(foo() == null);
+content_copy
+To return multiple values in a function, aggregate the values in a record.
+
+(String, int) foo() {
+  return ('something', 42);
+}
+ */
