@@ -1,4 +1,10 @@
 //Error handling
+//content:
+//Exceptions
+//Stack Trace
+//Finally Block
+//Assert
+
 
 
 
@@ -176,8 +182,8 @@ void main5() {
   try {
     print('Opening a file...');
     readFile(); // Simulate a file read operation that might throw an exception.
-  } on FileNotFoundException catch (e) {
-    print('Error: $e');
+  } on FileNotFoundException  {
+    print('Error: cannot open file');
   } catch (e) {
     print('An unexpected error occurred: $e');
   } finally {
