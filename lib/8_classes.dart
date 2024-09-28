@@ -1,3 +1,5 @@
+import 'dart:math';
+
 //Classes in Dart:
 
 
@@ -26,9 +28,14 @@
 //To define a class in Dart, you use the class keyword followed by the class name.
 
 //example:
-import 'package:dart_basics/9_error_handling.dart';
+//sample class with instance variables
+class Point {
+  double? x; // Declare instance variable x, initially null.
+  double? y; // Declare y, initially null.
+  double z = 0; // Declare z, initially 0.
+}
 
-
+//example2
 class Employee {
   String name = "Raslan";
   String jobTitle = "Flutter Developer";
@@ -245,6 +252,42 @@ class Employee6 {
 
 
 
+
+//=========================================================================================================
+//Named constructor:
+//Named constructors
+// #
+// Use a named constructor to implement multiple constructors for a class or to provide extra clarity:
+//
+const double xOrigin = 0;
+const double yOrigin = 0;
+
+class Point3 {
+  final double x;
+  final double y;
+
+  // Sets the x and y instance variables
+  // before the constructor body runs.
+  Point3(this.x, this.y);
+
+  // Named constructor
+  Point3.origin()
+      : x = xOrigin,
+        y = yOrigin;
+
+}
+/*
+void main(){
+Point3 p = Point3.origin();
+print('x: ${p.x}, y: ${p.y}'); // x: 0, y: 0
+
+Point3 p1 = Point3(1, 1);
+print('x: ${p1.x}, y: ${p1.y}'); // x: 1, y: 1
+}
+ */
+// content_copy
+// A subclass doesn't inherit a superclass's named constructor.
+// To create a subclass with a named constructor defined in the superclass, implement that constructor in the subclass.
 
 
 
@@ -514,6 +557,40 @@ class CompanyOwner1{
 
 
 
+//Static methods
+
+// Static methods (class methods) don't operate on an instance, and thus don't have access to this.
+// They do, however, have access to static variables.
+// As the following example shows, you invoke static methods directly on a class:
+
+
+
+class Point2 {
+  double x, y;
+  Point2(this.x, this.y);
+
+  static double distanceBetween(Point2 a, Point2 b) {
+    var dx = a.x - b.x;
+    var dy = a.y - b.y;
+    return sqrt(dx * dx + dy * dy);
+  }
+}
+
+// void main() {
+//   var a = Point2(2, 2);
+//   var b = Point2(4, 4);
+//   var distance = Point2.distanceBetween(a, b);
+//   assert(2.8 < distance && distance < 2.9);
+//   print(distance);
+// }
+//=========================================================================================================
+
+
+
+
+
+
+
 
 
 
@@ -727,12 +804,12 @@ class Dog1 implements Animal1, Pet {
 //example:
 
 mixin Logger {
-  void log(String message) {
+  void logger(String message) {
     print('Log: $message');
   }
 }
 mixin Logger2 {
-  void log2(String message) {
+  void logger2(String message) {
     print('Log2: $message');
   }
 }
@@ -746,7 +823,7 @@ class Animal3{
 class Cat1 with Logger {
   void meow() {
     print('Cat is meowing.');
-    log('Cat is meowing.');
+    logger('Cat is meowing.');
   }
 }
 
@@ -755,13 +832,13 @@ class Dog2 extends Animal3 with Logger, Logger2 {
   @override
   void eat() {
     super.eat();
-    log('Dog is eating.');
+    logger('Dog is eating.');
   }
 
   void bark() {
     print('Dog is barking.');
-    log('Logger1: Dog is barking.');
-    log2('Logger2: Dog is barking.');
+    logger('Logger1: Dog is barking.');
+    logger2('Logger2: Dog is barking.');
 
   }
 }
