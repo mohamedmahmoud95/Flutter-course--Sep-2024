@@ -5,9 +5,7 @@
 //objects
 //constructors
 //default constructors
-//named constructors
 //constant constructors
-//factory constructors
 //methods
 //inheritance
 //getters and setters
@@ -203,3 +201,149 @@ class Employee4 {
 
 //=========================================================================================================
 
+
+
+
+
+
+//=========================================================================================================
+//What if you need a function/method/instruction to be executed when the constructor is called?
+
+//example:
+class Employee6 {
+  String name;
+  String jobTitle;
+  double yearsOfExperience;
+  double salary;
+  double taxes = 0.15;
+  double bonus;
+  late double netSalary;
+
+  Employee6({required this.name, required this.jobTitle, required this.yearsOfExperience, required this.bonus, required this.salary}){
+    sayHello();
+    netSalary = calculateSalary(salary, taxes, bonus);
+    print("And my net salary is: $netSalary");
+  }
+
+  void sayHello() {
+    print('Hello, my name is $name, and I\'m a $jobTitle with $yearsOfExperience years of experience.');
+  }
+
+  double calculateSalary(double salary, double taxes, double bonus){
+    return salary - (salary*taxes) + bonus;
+  }
+}
+
+
+// void main(){
+//   var employee6 = new Employee6( name: "Raslan", jobTitle: "Flutter Developer", yearsOfExperience: 2.5, bonus: 500, salary: 5000);
+// }
+
+//=========================================================================================================
+
+
+
+
+
+
+//=========================================================================================================
+//Method overriding:
+
+//use the @override keyword to override (create your own version) of a built-in or an inherited method
+//example:
+
+
+// void main(){
+//   var employee3 = new Employee3( name: "Raslan", jobTitle: "Flutter Developer", yearsOfExperience: 2.5);
+//   print(employee3);     //Instance of 'Employee3'
+//   print(employee3.toString());  //Instance of 'Employee3'
+// }
+
+//the print() function calls the toString() method of the object to get a string representation of the object.
+//If you don't override the toString() method, the default implementation of the Object class is used, which returns the class name and the hash code of the object.
+//To override the toString() method, you can use the @override annotation.
+
+class Employee7 {
+  String name;                //required parameter
+  String jobTitle;            //required parameter
+  double? yearsOfExperience;  //optional parameter
+
+  Employee7({required this.name, required this.jobTitle, this.yearsOfExperience});
+
+  void sayHello() {
+    print('Hello, my name is $name, and I\'m a $jobTitle${yearsOfExperience != null?  " with $yearsOfExperience years of experience." : "."}');
+  }
+
+  @override
+  String toString() {
+    return 'Employee3{name: $name, jobTitle: $jobTitle, yearsOfExperience: $yearsOfExperience}';
+  }
+}
+
+// void main(){
+//   var employee7 = new Employee7( name: "Raslan", jobTitle: "Flutter Developer", yearsOfExperience: 2.5);
+//   print(employee7);     //Employee3{name: Raslan, jobTitle: Flutter Developer, yearsOfExperience: 2.5}
+//   print(employee7.toString());  //Employee3{name: Raslan, jobTitle: Flutter Developer, yearsOfExperience: 2.5}
+// }
+
+//=========================================================================================================
+
+
+
+
+
+
+
+//=========================================================================================================
+//
+
+
+//=========================================================================================================
+
+
+
+
+
+
+
+//=========================================================================================================
+//
+
+
+//=========================================================================================================
+
+
+
+
+
+
+
+//=========================================================================================================
+//
+
+
+//=========================================================================================================
+
+
+
+
+
+
+
+//=========================================================================================================
+//
+
+
+//=========================================================================================================
+
+
+
+
+
+
+
+//=========================================================================================================
+//
+
+
+//=========================================================================================================
