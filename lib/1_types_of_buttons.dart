@@ -21,14 +21,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ButtonsDemo extends StatefulWidget {
-  const ButtonsDemo({super.key});
+class TypesOfButtonsDemo extends StatefulWidget {
+  const TypesOfButtonsDemo({super.key});
 
   @override
-  State<ButtonsDemo> createState() => _ButtonsDemoState();
+  State<TypesOfButtonsDemo> createState() => _TypesOfButtonsDemoState();
 }
 
-class _ButtonsDemoState extends State<ButtonsDemo> {
+class _TypesOfButtonsDemoState extends State<TypesOfButtonsDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

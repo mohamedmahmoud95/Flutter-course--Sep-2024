@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'buttons.dart';
+import '0_simple_button_demo.dart';
+import '1_types_of_buttons.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,17 +22,9 @@ class _MyAppState extends State<MyApp> {
 
       debugShowCheckedModeBanner: false,
       home:
-      ButtonsDemo(),
-      // Scaffold(
-      //   body: Center(
-      //     child:
-      //     CupertinoButton(onPressed: (){}, color: Colors.blue,
-      //     pressedOpacity: 0.9,
-      //     disabledColor: Colors.grey,
-      //       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10), child: Text("press me"),
-      //     ),
-      //   ),
-      // ),
+      SimpleButtonDemo(),
+      //TypesOfButtonsDemo(),
+
     );
   }
 }
