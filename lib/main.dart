@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import '0_simple_button_demo.dart';
 import '1_types_of_buttons.dart';
+import '3_toggling_buttons_exercise.dart';
+import '2_zoom_in_out_exercise.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,9 +24,10 @@ class _MyAppState extends State<MyApp> {
 
       debugShowCheckedModeBanner: false,
       home:
-      SimpleButtonDemo(),
+      //SimpleButtonDemo(),
       //TypesOfButtonsDemo(),
-
+      ZoomInOutExercise(),
+        //SimpleExerciseOnButtons(),
     );
   }
 }
