@@ -23,6 +23,9 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
+
+  TextEditingController nameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+
             Container(
               height: 250,
               width: double.infinity,

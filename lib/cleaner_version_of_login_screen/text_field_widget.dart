@@ -34,7 +34,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
   Widget build(BuildContext context) {
     return TextField(
       controller: widget.textEditingController,
-      obscureText: widget.obscureText,
+      obscureText: widget.obscureText == true? userInputIsHidden : false,
       decoration: InputDecoration(
         hintText: widget.hintText,
         labelText: widget.labelText,
@@ -47,8 +47,8 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
                   });
                 },
                 child: Icon(userInputIsHidden
-                    ? Icons.visibility
-                    : Icons.visibility_off),
+                    ?
+                     Icons.visibility_off:Icons.visibility),
               ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),

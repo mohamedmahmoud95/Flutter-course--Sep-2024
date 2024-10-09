@@ -42,6 +42,7 @@ class _CleanerVersionOfLoginScreenState extends State<CleanerVersionOfLoginScree
                     height: 40,
                   ),
                   TextFieldWidget(
+                    obscureText: false,
                       textEditingController: emailController,
                       hintText: 'Email',
                       labelText: 'Email'),
@@ -179,6 +180,8 @@ class _CleanerVersionOfLoginScreenState extends State<CleanerVersionOfLoginScree
       ),
     );
   }
+
+
   void login() {
     bool validEmailAndPassword =
         validateEmailAndPassword(emailController.text, passwordController.text);
