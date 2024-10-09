@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'cleaner_version_of_login_screen/cleaner_version_of_login_screen.dart';
 import 'login_screen.dart';
 
 void main() {
@@ -17,7 +18,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginScreen(),
+      home:
+      //LoginScreen(),
+      CleanerVersionOfLoginScreen(),
     );
   }
 }
