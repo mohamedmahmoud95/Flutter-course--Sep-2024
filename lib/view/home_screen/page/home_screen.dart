@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         body: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Center(
             child: Column(
               children: [
@@ -70,6 +70,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         });
                       }
                     }),
+
+                const SizedBox(height: 10,),
 
                 filteredProducts.isEmpty
                     ? const Expanded(
