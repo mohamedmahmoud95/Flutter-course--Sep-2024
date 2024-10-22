@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/lottie_animation_example.dart';
 
 
 import 'animated_cross_fade_example.dart';
@@ -30,7 +31,7 @@ class _AnimatedListExampleState extends State<AnimatedListExample> {
 
                 onPressed: (){
                   Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
-                  const AnimatedCrossFadeExample()));
+                  const LottieAnimationExample()));
                 }
             ),
 

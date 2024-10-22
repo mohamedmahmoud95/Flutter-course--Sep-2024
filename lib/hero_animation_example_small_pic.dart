@@ -5,7 +5,16 @@ import 'package:flutter_animation/hero_animation_example_big_pic.dart';
 
 import 'animated_list_example.dart';
 
+List<String> productsImages = [
+  "https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg",
+  "https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg",
+  "https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg",
+  "https://m.media-amazon.com/images/I/51w9RcIHUeL._AC_SX679_.jpg",
+  "https://m.media-amazon.com/images/I/71WU1SBc4IL._AC_SX679_.jpg",
+
+];
 class HeroAnimationExample extends StatelessWidget {
+
   const HeroAnimationExample({Key? key}) : super(key: key);
 
   @override

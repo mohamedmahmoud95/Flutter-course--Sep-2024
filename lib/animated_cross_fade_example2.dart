@@ -28,7 +28,9 @@ class _AnimatedCrossFadeExample2State extends State<AnimatedCrossFadeExample2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: const Text(
             style: TextStyle(fontSize: 20), "AnimatedCrossFade example 2"),
       ),

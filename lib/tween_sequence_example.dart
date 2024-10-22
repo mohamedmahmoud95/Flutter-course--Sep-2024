@@ -26,7 +26,6 @@ class _TweenSequenceExampleState extends State<TweenSequenceExample>
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 300),
       vsync: this,
-
     );
 
     _colorAnimation = ColorTween(begin: Colors.grey, end: Colors.red)

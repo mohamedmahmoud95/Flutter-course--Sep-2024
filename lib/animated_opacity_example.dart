@@ -12,15 +12,12 @@ class AnimatedOpacityExample extends StatefulWidget {
 
 class _AnimatedOpacityExampleState extends State<AnimatedOpacityExample> {
   double _currentOpacity = 1;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
           title: const Text("AnimatedOpacity example"),
         ),
-
-
       body:
           Center(
             child: Column(

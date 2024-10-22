@@ -14,14 +14,13 @@ class AnimatedCrossFadeExample extends StatefulWidget {
 
 class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
   String _selectedColor = 'Grey';
-  String redPoloURL = "dsfsdgdfg";
-  String bluePoloURL = "dsfsdgdfg";
-  String blackPoloURL = "dsfsdgdfg";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: const
         Text(
             style: TextStyle(fontSize: 20),

@@ -16,6 +16,7 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
   double width = 50;
   double height = 50;
   Color color = Colors.blue;
+  double borderRadius = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -35,12 +36,15 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
                   height: height,
                   width: width,
                   duration: Duration(seconds: 1),
-                  color: color,
-                ),
+                  decoration: BoxDecoration(
+                    color: color,
+                    borderRadius: BorderRadius.circular(borderRadius),),                ),
                 Container(
                   height: height,
                   width: width,
-                  color: color,
+                  decoration: BoxDecoration(
+                    color: color,
+                    borderRadius: BorderRadius.circular(borderRadius),),
                 ),
               ],
             ),
@@ -54,6 +58,7 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
                       height = 150;
                       width = 150;
                       color = Colors.orange;
+                      borderRadius = 30;
                     });
                   },
                 ),
@@ -64,6 +69,7 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
                       height = 50;
                       width = 50;
                       color = Colors.blue;
+                      borderRadius = 0;
                     });
                   },
                 ),

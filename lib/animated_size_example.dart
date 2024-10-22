@@ -34,7 +34,7 @@ class _AnimatedSizeExampleState extends State<AnimatedSizeExample> {
           },
           child:  AnimatedSize(
             duration: const Duration(seconds: 1),
-            curve: Curves.easeIn,
+            curve: Curves.ease,
             child: FlutterLogo(size: size,),
 
           ),
