@@ -38,7 +38,7 @@ class _ThemeExampleWithMultipleTextStylesState extends State<ThemeExampleWithMul
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme:  ThemeData(
-        primarySwatch: Colors.deepPurple
+        primarySwatch: Colors.blue
       ),
       home: Scaffold(
         appBar: AppBar(),

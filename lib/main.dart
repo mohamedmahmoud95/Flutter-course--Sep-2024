@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_course_aug23_themes_and_responsive_design/screens/responsive_design_examples/playing_with_media_query.dart';
 import 'package:flutter_course_aug23_themes_and_responsive_design/screens/responsive_design_examples/responsive_design_example.dart';
 import 'package:flutter_course_aug23_themes_and_responsive_design/screens/responsive_design_examples/responsive_design_example1.dart';
 import 'package:flutter_course_aug23_themes_and_responsive_design/screens/theme_examples/theme_example_with_multiple_text_styles.dart';
@@ -21,14 +22,16 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      // theme: ThemeData(
+      //   brightness: Brightness.dark
+      // ),
       home:
-      //  PlayingWithMediaQuery(),
+       // PlayingWithMediaQuery(),
       //ResponsiveDesignExample1(),
-      //ResponsiveDesignExample(),
+     // ResponsiveDesignExample(),
       //ThemeExample(),
-      //ThemeExample2(),
-      ThemeExampleWithMultipleTextStyles(),
-
+     ThemeExample2(),
+       //ThemeExampleWithMultipleTextStyles(),
     );
   }
 }

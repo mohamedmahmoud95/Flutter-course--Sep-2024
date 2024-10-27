@@ -26,7 +26,9 @@ class _ResponsiveDesignExampleState extends State<ResponsiveDesignExample> {
 
   Widget mainVideo()
   {
-    return FlutterLogo(size: width < 500? width-50 : width/2, style: FlutterLogoStyle.stacked,);
+    return Container(
+      color: Colors.amber.shade100,
+      child:FlutterLogo(size: width < 500? width-50 : width/2, style: FlutterLogoStyle.stacked,),);
   }
 
   Widget recommendedVideos()
@@ -56,11 +58,11 @@ class _ResponsiveDesignExampleState extends State<ResponsiveDesignExample> {
             Text("This tutorial is awesome"),
             Text("This tutorial is very bad"),
             Text("This tutorial is very good"),
-            Text("This tutorial is very "),
+            Text("This tutorial is very amazing"),
             Text("This tutorial is awesome"),
             Text("This tutorial is very bad"),
             Text("This tutorial is very good"),
-            Text("This tutorial is very "),
+            Text("This tutorial is very amazing"),
           ],
         ),
       );

@@ -17,7 +17,7 @@ class _ResponsiveDesignExample1State extends State<ResponsiveDesignExample1> {
 
       body: Center(
           child:
-              height > width? VertialView() : horizontalView(),
+              height > width? verticalView() : horizontalView(),
       ),
     );
   }
@@ -28,30 +28,31 @@ class _ResponsiveDesignExample1State extends State<ResponsiveDesignExample1> {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          FlutterLogo(size: 500/2,),
-          FlutterLogo(size: 500/2,),
-          FlutterLogo(size: 500/2,),
-          FlutterLogo(size: 500/2,),
-          FlutterLogo(size: 500/2,),
+          ...listOfLogos(),
+
         ],
       ),
     );
   }
 
-  Widget VertialView()
+  Widget verticalView()
   {
     return   SingleChildScrollView(
         child: Column(
       children: [
-        FlutterLogo(size: 500/2,),
-        FlutterLogo(size: 500/2,),
-        FlutterLogo(size: 500/2,),
-        FlutterLogo(size: 500/2,),
-        FlutterLogo(size: 500/2,),
+        ...listOfLogos(),
       ],
         ),
     );
   }
 
-
+  List<Widget> listOfLogos(){
+    return [
+      FlutterLogo(size: 500/2,),
+      FlutterLogo(size: 500/2,),
+      FlutterLogo(size: 500/2,),
+      FlutterLogo(size: 500/2,),
+      FlutterLogo(size: 500/2,),
+    ];
+  }
 }

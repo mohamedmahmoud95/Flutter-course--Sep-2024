@@ -12,22 +12,20 @@ class _PlayingWithMediaQueryState extends State<PlayingWithMediaQuery> {
 
   @override
   Widget build(BuildContext context) {
-    final double width  = MediaQuery.of(context).size.width;
-    final double height = MediaQuery.of(context).size.height;
-
+     double width  = MediaQuery.of(context).size.width;
+     double height = MediaQuery.of(context).size.height;
     return Scaffold(
-
-
       appBar: AppBar(
-        backgroundColor: height < 500 ? Colors.blue : Colors.purple,
-        title: Text("Media Query"),
+        backgroundColor: height < 500 ? Colors.blue : Colors.purple.shade300,
+        title: const Text("Media Query"),
       ),
 
       body: Container(
-        color: width < 700 ? Colors.white : Colors.green,
+        color: width < 700 ? Colors.white : Colors.teal.shade100,
 
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "Width = $width",
@@ -38,7 +36,7 @@ class _PlayingWithMediaQueryState extends State<PlayingWithMediaQuery> {
 
               Text(
                 "Height = $height",
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 50
                 ),
               ),

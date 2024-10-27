@@ -28,6 +28,20 @@ class _ThemeExampleState extends State<ThemeExample> {
           ],
         ),
 
+        body: Center(
+          child: Card(
+            child: AlertDialog(
+              title: const Text("This is a title"),
+              content: const Text("This is a content"),
+              actions: [
+                TextButton(onPressed: (){}, child: const Text("Cancel")),
+                TextButton(onPressed: (){}, child: const Text("Ok")),
+              ],
+            ),
+          ),
+        ),
+
+
         floatingActionButton: FloatingActionButton(
           onPressed: (){},
           child: const Icon(Icons.add),

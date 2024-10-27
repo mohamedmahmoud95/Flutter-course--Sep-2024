@@ -23,6 +23,7 @@ class _ThemeExampleState extends State<ThemeExample2> {
         brightness: Brightness.light,
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
           backgroundColor: Colors.black,
+          foregroundColor: Colors.white,
         ),
         primarySwatch: Colors.deepPurple,
         scaffoldBackgroundColor: Colors.purple.shade50,
@@ -60,8 +61,9 @@ class _ThemeExampleState extends State<ThemeExample2> {
         ),
 
         floatingActionButton: FloatingActionButton(
+          backgroundColor: Theme.of(context).floatingActionButtonTheme.backgroundColor,
           onPressed: (){},
-          child: const Icon(Icons.add),
+          child:  Icon(Icons.add, color: Theme.of(context).floatingActionButtonTheme.foregroundColor,),
         ),
       ),
     );
