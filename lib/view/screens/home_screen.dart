@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                     selectedIndex: _selectedIndex,
                   ),
-            Flexible(
+            const Flexible(
               flex: 1,
               fit: FlexFit.loose,
               child: ListOfToDosWidget(),
