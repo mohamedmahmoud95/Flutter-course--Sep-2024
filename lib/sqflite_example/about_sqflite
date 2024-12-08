@@ -1,0 +1,14 @@
+//sqflite:
+//SQFlite is a Flutter plugin for using a local database.
+//It allows you to CRUD data in a local SQLite database.
+//SQFlite is a lightweight way to store data locally, and it is suitable for storing large amounts of data.
+//SQFlite is a simple way to save and retrieve data, but it is not suitable for storing sensitive data like passwords or API keys.
+
+QLite plugin for Flutter. Supports iOS, Android and MacOS.
+    Support transactions and batches
+    Automatic version managment during open
+    Helpers for insert/query/update/delete queries
+    DB operation executed in a background thread on iOS and Android
+Other platforms support:
+    Linux/Windows/DartVM support using sqflite_common_ffi
+    Experimental Web support using sqflite_common_ffi_web.

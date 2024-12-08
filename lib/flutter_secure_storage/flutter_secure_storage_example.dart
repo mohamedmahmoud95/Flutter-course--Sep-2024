@@ -33,6 +33,7 @@ class _FlutterSecureStorageExampleState
 
   Future<void> _readData() async {
     final value = await _secureStorage.readSecureData(_keyController.text);
+    debugPrint(value);
     setState(() {
       _retrievedValue = value ?? 'No data found for this key';
     });

@@ -15,6 +15,7 @@ class _SharedPreferencesExampleState extends State<SharedPreferencesExample> {
   final SharedPreferencesService _prefsService = SharedPreferencesService.instance;
 
   final TextEditingController _textController = TextEditingController();
+
   String? _storedValue;
   bool _isSaved = false;
 
@@ -27,6 +28,7 @@ class _SharedPreferencesExampleState extends State<SharedPreferencesExample> {
   // Load data from SharedPreferences
   _getLocalData() async {
     String? value = await _prefsService.getString('storedData');
+    debugPrint(value);
     setState(() {
       _storedValue = value;
     });
@@ -44,7 +46,7 @@ class _SharedPreferencesExampleState extends State<SharedPreferencesExample> {
 
   // Clear the saved data
   _clearData() async {
-    await _prefsService.remove('storedData');
+    await _prefsService.clear();
     setState(() {
       _storedValue = null;
       _isSaved = false;
@@ -79,6 +81,11 @@ class _SharedPreferencesExampleState extends State<SharedPreferencesExample> {
             ElevatedButton(
               onPressed: _clearData,
               child: const Text('Clear Data'),
+            ),
+
+            ElevatedButton(
+              onPressed: _getLocalData,
+              child: const Text('get Data'),
             ),
             const SizedBox(height: 40),
             _isSaved

@@ -26,7 +26,7 @@ class SharedPreferencesService {
 
   // Get a string value
   Future<String?> getString(String key) async {
-    return _prefs?.getString(key);
+      return _prefs?.getString(key);
   }
 
   // Save an integer value
