@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class SecureStorageService {
@@ -36,8 +38,25 @@ class SecureStorageService {
     return keys;
   }
 
+  Future<Map<String, String>> readAllData() async {
+    final allData = await _storage.readAll();
+    return allData;
+  }
+
   // Delete all secure data
   Future<void> deleteAllData() async {
     await _storage.deleteAll();
   }
+
+
+  Future<void> storeBoolean(String key, bool value) async {
+    await _storage.write(key: key, value: value.toString());
+  }
+
+  Future<bool?> getBoolean(String key) async {
+    final value = await _storage.read(key: key);
+    return value != null ? value.toLowerCase() == 'true' : null;
+  }
+
+
 }
