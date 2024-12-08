@@ -1,43 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:local_database/share_preferences/shared_preferences_services.dart';
 
-void main() {
-  runApp(MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Shared Preferences Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: SharedPreferencesExample(),
-    );
-  }
-}
 
 class SharedPreferencesExample extends StatefulWidget {
+  const SharedPreferencesExample({super.key});
+
   @override
-  _SharedPreferencesExampleState createState() => _SharedPreferencesExampleState();
+  State<SharedPreferencesExample> createState() => _SharedPreferencesExampleState();
 }
 
 class _SharedPreferencesExampleState extends State<SharedPreferencesExample> {
-  final SharedPreferencesService _prefsService = SharedPreferencesService();
 
-  TextEditingController _textController = TextEditingController();
+  final SharedPreferencesService _prefsService = SharedPreferencesService.instance;
+
+  final TextEditingController _textController = TextEditingController();
   String? _storedValue;
   bool _isSaved = false;
 
   @override
   void initState() {
     super.initState();
-    _loadData();
+    _getLocalData();
   }
 
   // Load data from SharedPreferences
-  _loadData() async {
+  _getLocalData() async {
     String? value = await _prefsService.getString('storedData');
     setState(() {
       _storedValue = value;

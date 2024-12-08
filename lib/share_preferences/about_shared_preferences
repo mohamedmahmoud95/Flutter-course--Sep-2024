@@ -1,0 +1,14 @@
+//Shared preferences:
+    •	SharedPreferences is a key-value store that allows you to save and retrieve data.
+    •	It is used to store small amounts of data that you want to persist across app launches.
+    •	SharedPreferences is a simple way to save primitive data types like booleans, floats, ints, longs, and strings.
+    •	SharedPreferences is a singleton class that you can use to save and retrieve data.
+    •	SharedPreferences is a lightweight way to store data, but it is not suitable for storing large amounts of data.
+    •	SharedPreferences is not secure, and it should not be used to store sensitive data like passwords or API keys.
+
+Key Concepts:
+	•	Saving Data: SharedPreferences saves data as key-value pairs. You can save basic data types like strings, ints, double, bool, and List<String>.
+	•	Retrieving Data: You can retrieve the saved data using the key. It returns null if the key does not exist.
+	•	Removing Data: You can remove a single key-value pair or clear all saved data.
+
+
