@@ -1,0 +1,5 @@
+//Flutter secure storge:
+    •	Flutter Secure Storage is a plugin for Flutter that provides secure storage for sensitive data, such as API keys, passwords, and other sensitive information.
+    •	Flutter Secure Storage is a key-value store that uses platform-specific secure storage to store data in an encrypted format.
+    •	Flutter Secure Storage is a secure way to store sensitive data that you want to persist across app launches.
+    •	Flutter Secure Storage is a lightweight way to store data, but it is not suitable for storing large amounts of data.
