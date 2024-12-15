@@ -1,6 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:testing101/calculator.dart';
 
+
+///To run the tests, execute the following command:
+///flutter test test/calculator_test_unit_test.dart
 void main() {
 
   test("Testing the add function in isolation, should return sum of two numbers", () {
